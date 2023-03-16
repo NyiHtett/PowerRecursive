@@ -1,14 +1,25 @@
-//
-//  main.cpp
-//  PowerRecursive
-//
-//  Created by Nyi Htet on 3/16/23.
-//
+#include<iostream>
+using namespace std;
 
-#include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+int recursive(int a, int n){
+    if(n == 1){
+        return a;
+    }
+    else{
+        return a*recursive(a, n-1);
+    }
+    
+}
+
+int main(){
+    int a, n;
+    cout << "base: ";
+    cin >> a;
+    cout << "power: ";
+    cin >> n;
+    cout << recursive(a,n) << endl;
+    
     return 0;
 }
